@@ -1,0 +1,24 @@
+{
+  "name": "game",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "players": {
+      "type": "hasMany",
+      "model": "player",
+      "foreignKey": ""
+    },
+    "nextPlayer": {
+      "type": "hasOne",
+      "model": "player",
+     "foreignKey": "id" 
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
