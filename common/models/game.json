@@ -5,18 +5,26 @@
   "options": {
     "validateUpsert": true
   },
-  "properties": {},
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "board": {
+      "type": "object"
+    }
+  },
   "validations": [],
   "relations": {
+    "nextPlayer": {
+      "type": "belongsTo",
+      "model": "player",
+      "foreignKey": ""
+    },
     "players": {
       "type": "hasMany",
       "model": "player",
       "foreignKey": ""
-    },
-    "nextPlayer": {
-      "type": "hasOne",
-      "model": "player",
-     "foreignKey": "id" 
     }
   },
   "acls": [],
